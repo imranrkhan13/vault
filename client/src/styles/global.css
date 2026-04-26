@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #F9F7F4;
+  --surface:  #FFFFFF;
+  --brown:    #2D1B0E;
+  --brown-2:  #5C3317;
+  --brown-3:  #96521F;
+  --brown-4:  #C8844A;
+  --muted:    #C4A882;
+  --border:   rgba(45,27,14,.1);
+  --border-2: rgba(45,27,14,.2);
+  --text:     #1A0F07;
+  --text-2:   #4A2E18;
+  --text-3:   #8C6040;
+  --radius:   12px;
+  --shadow:   0 1px 8px rgba(45,27,14,.08);
+  --shadow-lg:0 8px 40px rgba(45,27,14,.12);
+}
+
+html, body, #root {
+  width: 100%; height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes fadeUp  { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+@keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
+@keyframes pop     { 0%{transform:scale(.85);opacity:0} 60%{transform:scale(1.03)} 100%{transform:scale(1);opacity:1} }
+@keyframes liveDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+@keyframes tdot    { 0%,60%,100%{transform:translateY(0);opacity:.35} 30%{transform:translateY(-4px);opacity:1} }
+@keyframes slideR  { from{transform:translateX(16px);opacity:0} to{transform:none;opacity:1} }
+@keyframes conf    { 0%{transform:translateY(0) rotate(0);opacity:1} 100%{transform:translateY(80px) rotate(420deg);opacity:0} }
+@keyframes pulse2  { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+button { cursor: pointer; font-family: inherit; }
+button:active { transform: scale(.97); }
+input, textarea { font-family: inherit; }
